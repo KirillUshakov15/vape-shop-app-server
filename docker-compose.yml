@@ -1,0 +1,13 @@
+version: '3'
+services:
+  postgresql:
+    image: postgres
+    container_name: lesson
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1479253
+      - POSTGRES_DB=reliquid-database
+    command: postgres
+    restart: always

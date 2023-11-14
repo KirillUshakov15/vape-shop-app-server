@@ -40,9 +40,7 @@ export class AuthService{
     }
 
     async login(authUserDto: AuthUserDto){
-
         const {email, password} = authUserDto;
-
         const user = await this.userService.findByEmail(email);
 
         if(user && user.password){

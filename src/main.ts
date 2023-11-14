@@ -12,6 +12,7 @@ async function start(){
     credentials: true
   });
   app.use(cookieParser());
+  app.setGlobalPrefix('v1');
 
   await app.listen(PORT, () => {
     console.log(`Server success start on port: ${PORT}`)
